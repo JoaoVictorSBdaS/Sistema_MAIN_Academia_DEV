@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="packageController.ControllerFornecedor">
+   <children>
+      <Button fx:id="btVoltarFornecedor" layoutX="11.0" layoutY="41.0" mnemonicParsing="false" onAction="#btVoltarFornecedor_action" style="-fx-background-color: transparent;" text="Menul Principal" textFill="#dfdfdf">
+         <graphic>
+            <ImageView fitHeight="51.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Downloads/bitcoin-icons_exit-filled%20(1).png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="453.0" layoutX="137.0" layoutY="46.0" stroke="BLACK" strokeType="INSIDE" width="777.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color green="0.5215686559677124" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color green="0.3137255012989044" blue="0.6000000238418579" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Button fx:id="BT_ir_fornecdor_1" layoutX="21.0" layoutY="79.0" mnemonicParsing="false" onAction="#BT_ir_fornecdor_1_action" prefHeight="28.0" prefWidth="63.0" style="-fx-background-color: transparent;" text="Cliente" textFill="WHITE" />
+      <Button fx:id="BT_ir_fornecdor_2" layoutX="19.0" layoutY="105.0" mnemonicParsing="false" onAction="#BT_ir_fornecdor_2_action" prefHeight="28.0" prefWidth="82.0" style="-fx-background-color: transparent;" text="Vendedor" textFill="WHITE" />
+      <Button fx:id="BT_ir_fornecdor_3" layoutX="22.0" layoutY="135.0" mnemonicParsing="false" onAction="#BT_ir_fornecdor_3_action" prefHeight="28.0" prefWidth="104.0" style="-fx-background-color: transparent;" text="-&gt; Fornecedor" textFill="WHITE" />
+      <Button fx:id="BT_ir_fornecdor_4" layoutX="13.0" layoutY="165.0" mnemonicParsing="false" onAction="#BT_ir_fornecdor_4_action" prefHeight="28.0" prefWidth="82.0" style="-fx-background-color: transparent;" text="Produto" textFill="WHITE" />
+      <Button fx:id="BT_ir_fornecdor_6" layoutX="25.0" layoutY="193.0" mnemonicParsing="false" onAction="#BT_ir_fornecdor_6_action" prefHeight="28.0" prefWidth="118.0" style="-fx-background-color: transparent;" text="Relatorio de venda" textFill="WHITE" />
+      <Text fill="WHITE" layoutX="336.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Blue pen distribuidora -&gt; Fornecedor" wrappingWidth="326.87286376953125">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tableFornecedor" layoutX="145.0" layoutY="161.0" prefHeight="332.0" prefWidth="767.0">
+         <columns>
+            <TableColumn fx:id="ID_fornecedor_table" prefWidth="100.0" text="ID fornecedor" />
+            <TableColumn fx:id="nome_table" prefWidth="133.5999755859375" text="Nome" />
+            <TableColumn fx:id="CNPJ_table" prefWidth="131.20001220703125" text="CNPJ" />
+            <TableColumn fx:id="email_table" prefWidth="163.19998168945312" text="Email" />
+            <TableColumn fx:id="telefone_table" prefWidth="130.4000244140625" text="Telefone" />
+            <TableColumn fx:id="tipoJurd_table" prefWidth="109.59991455078125" text="tipoJurd" />
+         </columns>
+      </TableView>
+      <Button fx:id="btcadastrar" layoutX="381.0" layoutY="93.0" mnemonicParsing="false" onAction="#btcadastrar_action" prefHeight="26.0" prefWidth="92.0" style="-fx-background-radius: 5;" text="cadastrar" />
+      <Button fx:id="bteditar" layoutX="483.0" layoutY="93.0" mnemonicParsing="false" onAction="#bteditar_action" prefHeight="26.0" prefWidth="92.0" style="-fx-background-radius: 5;" text="editar" />
+      <Button fx:id="bt_escluir" layoutX="583.0" layoutY="93.0" mnemonicParsing="false" onAction="#bt_escluir_action" prefHeight="26.0" prefWidth="92.0" style="-fx-background-radius: 5;" text="excluir" />
+      <TextField fx:id="text_pesquisar" layoutX="381.0" layoutY="58.0" prefHeight="26.0" prefWidth="354.0" style="-fx-background-radius: 10;" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="26.0" layoutX="727.0" layoutY="58.0" stroke="BLACK" strokeType="INSIDE" width="112.0" />
+      <Button fx:id="bt_pesquisar" layoutX="731.0" layoutY="52.0" mnemonicParsing="false" onAction="#br_pesquisar_action" prefHeight="38.0" prefWidth="112.0" style="-fx-background-color: transparent;" text="pesquisar" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

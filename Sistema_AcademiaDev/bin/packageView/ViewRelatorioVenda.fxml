@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="packageController.ControllerRelatorioVenda">
+   <children>
+      <Button fx:id="btVoltarRelatorioVenda" layoutX="5.0" layoutY="38.0" mnemonicParsing="false" onAction="#btVoltarRelatorioVenda_action" style="-fx-background-color: transparent;" text="Menul Principal" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="51.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Downloads/bitcoin-icons_exit-filled%20(1).png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="453.0" layoutX="131.0" layoutY="42.0" stroke="BLACK" strokeType="INSIDE" width="777.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color green="0.5215686559677124" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color green="0.3137255012989044" blue="0.6000000238418579" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Button fx:id="BT_ir_RelatorioVenda_1" layoutX="19.0" layoutY="73.0" mnemonicParsing="false" onAction="#BT_ir_RelatorioVenda_1_action" prefHeight="28.0" prefWidth="53.0" style="-fx-background-color: transparent;" text="Cliente" textFill="WHITE" />
+      <Button fx:id="BT_ir_RelatorioVenda_2" layoutX="13.0" layoutY="101.0" mnemonicParsing="false" onAction="#BT_ir_RelatorioVenda_2_action" prefHeight="28.0" prefWidth="82.0" style="-fx-background-color: transparent;" text="Vendedor" textFill="WHITE" />
+      <Button fx:id="BT_ir_RelatorioVenda_3" layoutX="16.0" layoutY="131.0" mnemonicParsing="false" onAction="#BT_ir_RelatorioVenda_3_action" prefHeight="28.0" prefWidth="82.0" style="-fx-background-color: transparent;" text="Fornecedor" textFill="WHITE" />
+      <Button fx:id="BT_ir_RelatorioVenda_4" layoutX="7.0" layoutY="161.0" mnemonicParsing="false" onAction="#BT_ir_RelatorioVenda_4_action" prefHeight="28.0" prefWidth="82.0" style="-fx-background-color: transparent;" text="Produto" textFill="WHITE" />
+      <Button fx:id="BT_ir_RelatorioVenda_6" layoutX="6.0" layoutY="189.0" mnemonicParsing="false" onAction="#BT_ir_RelatorioVenda_6_action" prefHeight="28.0" prefWidth="133.0" style="-fx-background-color: transparent;" text="-&gt; Relatorio de venda" textFill="WHITE" />
+      <Text fill="WHITE" layoutX="310.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Blue pen distribuidora -&gt; Relatorio de venda">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tableRelatorio" layoutX="139.0" layoutY="157.0" prefHeight="332.0" prefWidth="767.0">
+         <columns>
+            <TableColumn fx:id="ID_relatorio_table" prefWidth="67.20004272460938" text="ID" />
+            <TableColumn fx:id="vendedorRelatorio_table" prefWidth="191.199951171875" text="Vendedor" />
+            <TableColumn fx:id="ClienteRelatorio_table" prefWidth="184.00003051757812" text="Cliente" />
+            <TableColumn fx:id="ProdutoRelatorio_table" prefWidth="117.60003662109375" text="produto" />
+            <TableColumn fx:id="QuantidadeRelatorio_table" prefWidth="77.59991455078125" text="Quantidade" />
+            <TableColumn fx:id="PrecoTotal_Relatorio_table" prefWidth="132.7999267578125" text="preço total" />
+         </columns>
+      </TableView>
+      <TextField layoutX="375.0" layoutY="53.0" prefHeight="26.0" prefWidth="354.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="28.0" layoutX="729.0" layoutY="53.0" stroke="BLACK" strokeType="INSIDE" width="104.0" />
+      <Button fx:id="btcadastrar" layoutX="735.0" layoutY="89.0" mnemonicParsing="false" onAction="#btcadastrarActionAction" prefHeight="26.0" prefWidth="92.0" style="-fx-background-radius: 5;" text="cadastrar" />
+      <Button layoutX="726.0" layoutY="47.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="110.0" style="-fx-background-color: transparent;" text="pesquisar" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
