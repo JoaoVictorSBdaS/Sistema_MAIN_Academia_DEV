@@ -10,7 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import packageControler.ClienteDAO;
+import packageControler.UsuariosLoginDAO;
 import packageModel.Cliente;
 
 public class ControllerCadastraCliente implements Initializable{
@@ -30,21 +30,21 @@ public class ControllerCadastraCliente implements Initializable{
     @Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
-		if(ControllerCliente.ClienteEditar != null) {
-			textNome.setText(ControllerCliente.ClienteEditar.getNome());
-			TextCPF_CNPJ.setText(ControllerCliente.ClienteEditar.getCPF_CNPJ());
-			TextEmail.setText(ControllerCliente.ClienteEditar.getEmail());
-			TextTelefone.setText(ControllerCliente.ClienteEditar.getTelefone());
-			textEndereco.setText(ControllerCliente.ClienteEditar.getEndereco());
-			TextTipoJurid.setText(ControllerCliente.ClienteEditar.getTipoJurid());			
+		if(ControllerUsuarios.ClienteEditar != null) {
+			textNome.setText(ControllerUsuarios.ClienteEditar.getNome());
+			TextCPF_CNPJ.setText(ControllerUsuarios.ClienteEditar.getCPF_CNPJ());
+			TextEmail.setText(ControllerUsuarios.ClienteEditar.getEmail());
+			TextTelefone.setText(ControllerUsuarios.ClienteEditar.getTelefone());
+			textEndereco.setText(ControllerUsuarios.ClienteEditar.getEndereco());
+			TextTipoJurid.setText(ControllerUsuarios.ClienteEditar.getTipoJurid());			
 		}else {
-			ControllerCliente.ClienteEditar = null;
+			ControllerUsuarios.ClienteEditar = null;
 		}
 	}
     
     @FXML
     void btSalvar_action(ActionEvent event) {
-    	if(ControllerCliente.ClienteEditar == null) {
+    	if(ControllerUsuarios.ClienteEditar == null) {
 			System.out.println("teste");
 			Cliente cliente = new Cliente();
 			cliente.setNome(textNome.getText());
@@ -55,7 +55,7 @@ public class ControllerCadastraCliente implements Initializable{
 			cliente.setDataNasc(dataNac.getValue().toString());
 			cliente.setDataPriCom(dataCopra.getValue().toString());
 			cliente.setEndereco(textEndereco.getText());
-			ClienteDAO Client = new ClienteDAO();
+			UsuariosLoginDAO Client = new UsuariosLoginDAO();
 			Client.create(cliente);
 			Stage stage = (Stage) btcancelar.getScene().getWindow();
 			stage.close();
@@ -69,10 +69,10 @@ public class ControllerCadastraCliente implements Initializable{
 			cliente.setDataNasc(dataNac.getValue().toString());
 			cliente.setDataPriCom(dataCopra.getValue().toString());
 			cliente.setEndereco(textEndereco.getText());
-			ClienteDAO Client = new ClienteDAO();
+			UsuariosLoginDAO Client = new UsuariosLoginDAO();
 			Client.Update(cliente);
 			Stage stage = (Stage) btcancelar.getScene().getWindow();
-			ControllerCliente.ClienteEditar = null;
+			ControllerUsuarios.ClienteEditar = null;
 			stage.close();
 		}
     }
@@ -85,7 +85,7 @@ public class ControllerCadastraCliente implements Initializable{
 		TextTelefone.setText("");
 		textEndereco.setText("");
 		TextTipoJurid.setText("");
-		ControllerCliente.ClienteEditar = null;	    
+		ControllerUsuarios.ClienteEditar = null;	    
 		
 	    Stage stage = (Stage) btcancelar.getScene().getWindow();
 	    stage.close();

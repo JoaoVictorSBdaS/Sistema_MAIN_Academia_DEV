@@ -1,6 +1,2 @@
-/application/
-/module-info.class
-/packageConnection/
-/packageControler/
 /packageController/
-/packageModel/
+/packageView/

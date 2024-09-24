@@ -18,10 +18,10 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-import packageControler.ClienteDAO;
+import packageControler.UsuariosLoginDAO;
 import packageModel.Cliente;
 
-public class ControllerCliente implements Initializable {
+public class ControllerUsuarios implements Initializable {
 
 	@FXML
 	private Button BTVoltarCliente;
@@ -70,12 +70,12 @@ public class ControllerCliente implements Initializable {
 	private TextField text_pesquisa_cliente;
 
 	private ObservableList<Cliente> arrayCliente;
-	private ClienteDAO cliente = new ClienteDAO();
+	private UsuariosLoginDAO cliente = new UsuariosLoginDAO();
 	public static Cliente ClienteEditar = new Cliente();
 
 	@FXML
 	void btCadastra_action(ActionEvent event) throws IOException {
-		ControllerCliente.ClienteEditar = null;
+		ControllerUsuarios.ClienteEditar = null;
 		Main.telaCadastroCliete();
 	}
 
@@ -94,7 +94,7 @@ public class ControllerCliente implements Initializable {
 
 	@FXML
 	void bt_pesquisar_cliente_action(ActionEvent event) {
-		arrayCliente = FXCollections.observableArrayList(ClienteDAO.search(text_pesquisa_cliente.getText()));
+		arrayCliente = FXCollections.observableArrayList(UsuariosLoginDAO.search(text_pesquisa_cliente.getText()));
 
 		ID_cliente_table.setCellValueFactory(new PropertyValueFactory<>("IDCliente"));
 		nome_table.setCellValueFactory(new PropertyValueFactory<>("Nome"));
@@ -132,7 +132,7 @@ public class ControllerCliente implements Initializable {
 			Optional<ButtonType> resultado = mensagemDeAviso.showAndWait();
 
 			if (resultado.isPresent() && resultado.get() == ButtonType.OK) {
-				ClienteDAO c = new ClienteDAO();
+				UsuariosLoginDAO c = new UsuariosLoginDAO();
 				c.Delete(cliente.getCPF_CNPJ());
 
 				Alert mensagemDeExclusao = new Alert(Alert.AlertType.INFORMATION);

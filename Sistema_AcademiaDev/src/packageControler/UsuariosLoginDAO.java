@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import packageConnection.ConnectionDatabase;
 import packageModel.Cliente;
 
-public class ClienteDAO {
+public class UsuariosLoginDAO {
 	
 	public void create(Cliente c) {
 		Connection con = ConnectionDatabase.getConnection();

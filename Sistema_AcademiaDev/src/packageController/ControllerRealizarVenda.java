@@ -20,7 +20,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import packageControler.ClienteDAO;
+import packageControler.UsuariosLoginDAO;
 import packageControler.CompraDAO;
 import packageControler.ProdutoDAO;
 import packageModel.Cliente;
@@ -151,9 +151,9 @@ public class ControllerRealizarVenda implements Initializable {
 		// do vendedor na tela de Registrar venda, de acordo com o usuário que realizou
 		// Login.
 		//
-		textCPFVendedor.setText(controllerLogin.vendedor.getCPF());
-		TextVendedor.setText(controllerLogin.vendedor.getNome());
-		TextIDVendedor.setText(controllerLogin.vendedor.getID_vendedor());
+		textCPFVendedor.setText(controllerUsuariosLogin.vendedor.getCPF());
+		TextVendedor.setText(controllerUsuariosLogin.vendedor.getNome());
+		TextIDVendedor.setText(controllerUsuariosLogin.vendedor.getID_vendedor());
 		TextQuntidadeProduto.setText("0");
 
 		/**
@@ -221,7 +221,7 @@ public class ControllerRealizarVenda implements Initializable {
 	}
 
 	public void CarregarTableClienteVenda() {
-		arrayCliente = FXCollections.observableArrayList(ClienteDAO.search(text_PesquisarCliente.getText()));
+		arrayCliente = FXCollections.observableArrayList(UsuariosLoginDAO.search(text_PesquisarCliente.getText()));
 
 		nome_Cliente.setCellValueFactory(new PropertyValueFactory<>("Nome"));
 		codego_CPF.setCellValueFactory(new PropertyValueFactory<>("CPF_CNPJ"));
@@ -248,7 +248,7 @@ public class ControllerRealizarVenda implements Initializable {
 
 	@FXML
 	void btPesquisarClienteAction(ActionEvent event) {
-		arrayCliente = FXCollections.observableArrayList(ClienteDAO.search(text_PesquisarCliente.getText()));
+		arrayCliente = FXCollections.observableArrayList(UsuariosLoginDAO.search(text_PesquisarCliente.getText()));
 
 		nome_Cliente.setCellValueFactory(new PropertyValueFactory<>("Nome"));
 		codego_CPF.setCellValueFactory(new PropertyValueFactory<>("CPF_CNPJ"));
@@ -259,8 +259,8 @@ public class ControllerRealizarVenda implements Initializable {
 
 	@FXML
 	void definirCliente(KeyEvent evente) {
-		if (ClienteDAO.search(textCPFVendedor.getText()) != null) {
-			cliente1 = ClienteDAO.search(textCPFCliente.getText());
+		if (UsuariosLoginDAO.search(textCPFVendedor.getText()) != null) {
+			cliente1 = UsuariosLoginDAO.search(textCPFCliente.getText());
 			cliente2 = cliente1.get(0);
 			textNomeCliente.setText(cliente2.getNome());
 		}

@@ -15,21 +15,14 @@ import javafx.scene.control.ToggleButton;
 import packageControler.VendedorDAO;
 import packageModel.Vendedor;
 
-
-
-public class controllerLogin implements Initializable{
+public class controllerUsuariosLogin implements Initializable{
 
     
-	@FXML
-    private Button but;
-    @FXML
-    private TextField textSenha;
-    @FXML
-    private PasswordField txtpasswuord;
-    @FXML
-    private TextField txtusuario;
-    @FXML
-    private ToggleButton verSenha;
+	@FXML    private Button but;
+    @FXML    private TextField textSenha;
+    @FXML    private PasswordField txtpasswuord;
+    @FXML    private TextField txtusuario;
+    @FXML    private ToggleButton verSenha;
 
     @FXML
     void VisualezarSenha(ActionEvent event) {

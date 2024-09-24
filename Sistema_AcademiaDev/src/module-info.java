@@ -1,4 +1,4 @@
-module Sistema_BluePen {
+module Sistema_AcademiaDev {
 	requires javafx.controls;
 	requires java.sql;
 	requires javafx.fxml;
