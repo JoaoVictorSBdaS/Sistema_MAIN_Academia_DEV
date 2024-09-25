@@ -27,7 +27,7 @@ public class Main extends Application {
 		try {
 			
 			Stage = primaryStage;
-			primaryStage.setTitle("blue pen");
+			primaryStage.setTitle("Academia DEV");
 			
 			
 			Parent fxmlLogin = FXMLLoader.load(getClass().getResource("/packageView/viewLogin.fxml"));

@@ -10,7 +10,7 @@ public class ConnectionDatabase {
 
 	
 	private final static String Driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-	private final static String URL = "jdbc:sqlserver://localhost:51860;encrypt=false;databaseName=AcademiaDEV";
+	private final static String URL = "jdbc:sqlserver://:192.168.72.225:51860;encrypt=false;databaseName=AcademiaDEV";
 	private final static String user = "sa";
 	private final static String password = "Senailab05";
 	
